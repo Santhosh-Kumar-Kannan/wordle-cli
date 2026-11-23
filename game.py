@@ -37,6 +37,7 @@ def load_words(path: Path) -> list[str]:
     Raises:
         InvalidWordListError: if any word has wrong length or has
             non-letter characters, or if the file contains no words at all.
+
     """
     words: list[str] = []
     with open(path, encoding="utf-8") as file:
@@ -92,6 +93,7 @@ def evaluate_guess(secret: str, guess: str) -> GuessResult:
 
     Returns:
         A GuessResult with one status per letter.
+
     """
     secret = secret.lower()
     guess = guess.lower()
@@ -130,6 +132,7 @@ class Game:
         secret: The hidden word.
         words: The full list of allowed guesses.
         results: Every accepted guess so far, as GuessResult objects.
+
     """
 
     def __init__(self, secret: str, words: list[str]) -> None:
@@ -172,6 +175,7 @@ class Game:
             GameOverError: the game has already been won or lost.
             InvalidGuessLengthError: the word is not WORD_LENGTH letters.
             WordNotInListError: the word is not in the word list.
+
         """
         if self.is_over:
             raise GameOverError(messages.GAME_ALREADY_OVER)

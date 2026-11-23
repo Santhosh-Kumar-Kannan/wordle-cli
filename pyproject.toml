@@ -9,4 +9,8 @@ line-length = 88
 [tool.ruff.lint]
 # E/W = pycodestyle, F = pyflakes, I = import sorting, B = bugbear,
 # UP = modern syntax, D = docstring rules (public classes/functions)
-select = ["E", "W", "F", "I", "B", "UP"]
+select = ["E", "W", "F", "I", "B", "UP", "D"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test functions are named after what they check, so skip docstring rules there.
+"tests/*" = ["D"]

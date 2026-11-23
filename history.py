@@ -14,6 +14,7 @@ class GameHistory:
     Attributes:
         path: Where the JSON file lives.
         games: The list of game records, oldest first.
+
     """
 
     def __init__(self, path: Path) -> None:

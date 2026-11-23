@@ -10,6 +10,7 @@ class GuessResult:
     Attributes:
         guess: The word that was guessed (lowercase).
         statuses: A list of LetterStatus, one per letter, same order as guess.
+
     """
 
     def __init__(self, guess: str, statuses: list[LetterStatus]) -> None:
@@ -28,6 +29,7 @@ class GuessResult:
         Example:
             S  P  E  E  D
             ✓  ✓  ~  ✗  ✗
+
         """
         sep = messages.CELL_SEPARATOR
         letters = sep.join(letter.upper() for letter in self.guess)
