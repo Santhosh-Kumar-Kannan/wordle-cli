@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+# Lets tests do `from game import ...` from the project root.
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+# E/W = pycodestyle, F = pyflakes, I = import sorting, B = bugbear,
+# UP = modern syntax, D = docstring rules (public classes/functions)
+select = ["E", "W", "F", "I", "B", "UP", "D"]
