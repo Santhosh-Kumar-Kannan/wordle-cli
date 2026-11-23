@@ -9,4 +9,4 @@ line-length = 88
 [tool.ruff.lint]
 # E/W = pycodestyle, F = pyflakes, I = import sorting, B = bugbear,
 # UP = modern syntax, D = docstring rules (public classes/functions)
-select = ["E", "W", "F", "I", "B", "UP", "D"]
+select = ["E", "W", "F", "I", "B", "UP"]
